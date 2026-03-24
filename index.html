@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkor Wat Blog</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            background-color: #f5d8d8;
+        }
+
+        header {
+            background-color: #6b1042;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 10px auto;
+            gap: 5px;
+        }
+
+        .content {
+            flex: 4;
+             text-align: center;
+            background: rgb(239, 226, 234);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            flex: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .meta {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        /* ===== Sidebar Categories Hover Effect ===== */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            padding: 12px 8px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .category-title {
+            font-weight: bold;
+            display: block;
+            color: #24535a;
+        }
+
+        .category-desc {
+            font-size: 13px;
+            color: #555;
+            margin: 0;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+
+        /* When hovering over the li, show the description */
+        ul li:hover .category-desc {
+            max-height: 80px; /* Enough space for the text */
+            opacity: 1;
+            margin-top: 8px;
+        }
+
+        /* footer {
+            text-align: center;
+            padding: 5px;
+            background: #258d71;
+            color: white;
+            margin-top: 5px;
+        } 
+
+        /* ===== Slideshow Style ===== */
+        .slideshow {
+            max-width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .fade {
+            animation: fadeEffect 1.5s;
+        }
+
+        @keyframes fadeEffect {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
+        }
+        /* ===== Popular Posts Style ===== */
+        .popular-posts-container {
+            margin-top: 20px;
+        }
+
+        .popular-post {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .popular-post img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .popular-post-info a {
+            text-decoration: none;
+            color: #106b5a;
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .popular-post-info a:hover {
+            color: #258d71;
+            text-decoration: underline;
+        }
+
+        .popular-post-date {
+            font-size: 12px;
+            color: gray;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Cambodia</h1>
+    <p>Discover the beauty of Angkor Wat</p>
+</header>
+<div class="container">
+    <div class="content">
+<h2>Angkor Wat Temple</h2>
+        <p class="meta">By CheatChinh | March 2026</p>
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/28912598/pexels-photo-28912598.jpeg" alt="Angkor Wat 1" style="width:85%; height: 450px;">
+            </div>
+
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/29046012/pexels-photo-29046012.jpeg" alt="Angkor Wat 2" style="width: 85%; height: 450px;">
+            </div>
+
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/2416576/pexels-photo-2416576.jpeg" alt="Angkor Wat 3" style="width:85%; height: 450px;">
+            </div>
+            
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/28912607/pexels-photo-28912607.jpeg" alt="Angkor Wat 4" style="width:85%; height: 450px;">
+            </div>
+            
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/19063439/pexels-photo-19063439.jpeg" alt="Angkor Wat 5" style="width:85%; height: 450px;">
+            </div>
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/15890596/pexels-photo-15890596.jpeg" alt="Angkor Wat 6" style="width:85%; height: 450px;">
+            </div>
+
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/15890548/pexels-photo-15890548.jpeg" alt="Angkor Wat 7" style="width: 85%; height: 450px;">
+            </div>
+
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/33471750/pexels-photo-33471750.jpeg" alt="Angkor Wat 8" style="width:85%; height: 450px;">
+            </div>
+            
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/9307972/pexels-photo-9307972.jpeg" alt="Angkor Wat 9" style="width:85%; height: 450px;">
+            </div>
+            
+            <div class="slide fade">
+                <img src="https://images.pexels.com/photos/15412787/pexels-photo-15412787.jpeg" alt="Angkor Wat 10" style="width:85%; height: 450px;">
+            </div>
+        </div>
+
+        <!-- <h2>Angkor Wat Temple</h2>
+        <p class="meta">By CheatChinh | March 2026</p> -->
+
+        <p>
+            Angkor Wat is the largest religious monument in the world and one of the most important cultural landmarks in Cambodia. 
+            Located in Siem Reap, it was originally built in the early 12th century as a Hindu temple dedicated to Vishnu.
+        </p>
+
+        <p>
+            The temple is famous for its grand architecture, detailed carvings, and beautiful sunrise views. Today, it is a symbol of 
+            national pride and appears on the Cambodian flag.
+        </p>
+
+        <p>
+            Visitors from all over the world come to explore its history, admire its beauty, and experience the peaceful atmosphere 
+            surrounding the temple complex.
+        </p>
+    </div>
+
+    <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li>
+                <span class="category-title">History</span>
+                <p class="category-desc">Learn about the ancient Khmer Empire and its rulers.</p>
+            </li>
+            <li>
+                <span class="category-title">Travel</span>
+                <p class="category-desc">Tips and guides for visiting Siem Reap and the temples.</p>
+            </li>
+            <li>
+                <span class="category-title">Culture</span>
+                <p class="category-desc">Discover the traditions, beliefs, and daily life of Cambodians.</p>
+            </li>
+            <li>
+                <span class="category-title">Architecture</span>
+                <p class="category-desc">Explore the unique bas-reliefs and sandstone structures.</p>
+            </li>
+        </ul>
+
+        <div class="popular-posts-container">
+            <h3>Popular Posts</h3>
+            
+            <div class="popular-post">
+                <img src="https://images.pexels.com/photos/28912598/pexels-photo-28912598.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sunrise at Angkor">
+                <div class="popular-post-info">
+                    <a href="#">Best Sunrise Spots at Angkor Wat</a>
+                    <p class="popular-post-date">Feb 12, 2026</p>
+                </div>
+            </div>
+
+            <div class="popular-post">
+                <img src="https://images.pexels.com/photos/2416576/pexels-photo-2416576.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Temple Carvings">
+                <div class="popular-post-info">
+                    <a href="#">The Hidden Meanings in Khmer Carvings</a>
+                    <p class="popular-post-date">Jan 28, 2026</p>
+                </div>
+            </div>
+
+            <div class="popular-post">
+                <img src="https://images.pexels.com/photos/15890548/pexels-photo-15890548.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Siem Reap Guide">
+                <div class="popular-post-info">
+                    <a href="#">3-Day Siem Reap Travel Itinerary</a>
+                    <p class="popular-post-date">Jan 15, 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- <footer>
+    <p>© 2026 | National Polytechnic Institute of Cambodia</p>
+</footer> -->
+
+<script>
+let index = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    index++;
+    if (index > slides.length) {
+        index = 1;
+    }
+
+    slides[index - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000);
+}
+</script>
+
+</body>
+</html>
